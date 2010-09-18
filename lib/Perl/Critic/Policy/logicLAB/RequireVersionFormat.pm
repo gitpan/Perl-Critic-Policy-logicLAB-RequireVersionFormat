@@ -1,6 +1,6 @@
 package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
-# $Id: RequireVersionFormat.pm 7204 2010-09-07 19:35:53Z jonasbn $
+# $Id: RequireVersionFormat.pm 7269 2010-09-18 06:36:56Z jonasbn $
 
 use strict;
 use warnings;
@@ -9,9 +9,9 @@ use base
 use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans };
 use List::MoreUtils qw(any);
 use Data::Dumper;
-use Carp qw(carp);
+use Carp qw(carp croak);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
@@ -78,8 +78,8 @@ sub violates {
 sub _parse_formats {
     my ( $self, $config_string ) = @_;
 
-    my @formats = split m{ \s* [|] \s* }xms, $config_string;
-
+    my @formats = split m{ \s* [||] \s* }xms, $config_string;
+    
     return \@formats
 }
 
@@ -169,7 +169,7 @@ This policy is part of L<Perl::Critic::logicLAB> distribution.
 
 =head1 VERSION
 
-This documentation describes version 0.01
+This documentation describes version 0.02
 
 =head1 DESCRIPTION
 
@@ -200,7 +200,7 @@ a violation.
 
 =over
 
-=item * our ($VERSION) = '$Revision: 7204 $' =~ m{ \$Revision: \s+ (\S+) }x;
+=item * our ($VERSION) = '$Revision: 7269 $' =~ m{ \$Revision: \s+ (\S+) }x;
 
 =item * $VERSION = '0.0.1';
 
@@ -263,7 +263,7 @@ mentioned in L</DESCRIPTION> in combination with the above two configuration
 parameters of course.
 
     [logicLAB::RequireVersionFormat]
-    formats = \A\d+\.\d+(_\d+)?\z | \Av\d+\.\d+.\d+?\z
+    formats = \A\d+\.\d+(_\d+)?\z || \Av\d+\.\d+\.\d+\z
 
 =head1 DEPENDENCIES AND REQUIREMENTS
 
@@ -289,7 +289,7 @@ This distribution has no known incompatibilities.
 
 I think it would be a good idea to ignore this particular version string and versions thereof:
 
-    our ($VERSION) = '$Revision: 7204 $' =~ m{ \$Revision: \s+ (\S+) }x;
+    our ($VERSION) = '$Revision: 7269 $' =~ m{ \$Revision: \s+ (\S+) }x;
 
 I am however still undecided.
 
@@ -316,8 +316,8 @@ The following policies have been disabled for this distribution
     ---------------------------- ------ ------ ------ ------ ------ ------ ------
     File                           stmt   bran   cond    sub    pod   time  total
     ---------------------------- ------ ------ ------ ------ ------ ------ ------
-    ...s/RequireVersionFormat.pm  100.0   89.3   88.9  100.0  100.0  100.0   97.0
-    Total                         100.0   89.3   88.9  100.0  100.0  100.0   97.0
+    ...B/RequireVersionFormat.pm   97.9   75.0   68.2  100.0  100.0  100.0   89.8
+    Total                          97.9   75.0   68.2  100.0  100.0  100.0   89.8
     ---------------------------- ------ ------ ------ ------ ------ ------ ------
 
 =head1 TODO

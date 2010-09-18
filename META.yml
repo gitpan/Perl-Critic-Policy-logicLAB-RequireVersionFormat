@@ -13,7 +13,7 @@ name: Perl-Critic-Policy-logicLAB-RequireVersionFormat
 provides:
   Perl::Critic::Policy::logicLAB::RequireVersionFormat:
     file: lib/Perl/Critic/Policy/logicLAB/RequireVersionFormat.pm
-    version: 0.01
+    version: 0.02
 requires:
   List::MoreUtils: 0
   Perl::Critic: 0
@@ -27,4 +27,4 @@ resources:
   homepage: http://logiclab.jira.com/wiki/display/PCPMRVF/Home
   license: http://www.perlfoundation.org/artistic_license_1_0
   repository: http://logicLAB.jira.com/svn/PCPMRVF
-version: 0.01
+version: 0.02
