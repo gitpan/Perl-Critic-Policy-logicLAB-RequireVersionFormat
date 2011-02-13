@@ -1,6 +1,6 @@
 package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
-# $Id: RequireVersionFormat.pm 7269 2010-09-18 06:36:56Z jonasbn $
+# $Id: RequireVersionFormat.pm 7466 2011-02-13 13:11:54Z jonasbn $
 
 use strict;
 use warnings;
@@ -11,7 +11,7 @@ use List::MoreUtils qw(any);
 use Data::Dumper;
 use Carp qw(carp croak);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
@@ -169,7 +169,7 @@ This policy is part of L<Perl::Critic::logicLAB> distribution.
 
 =head1 VERSION
 
-This documentation describes version 0.02
+This documentation describes version 0.03
 
 =head1 DESCRIPTION
 
@@ -200,7 +200,7 @@ a violation.
 
 =over
 
-=item * our ($VERSION) = '$Revision: 7269 $' =~ m{ \$Revision: \s+ (\S+) }x;
+=item * our ($VERSION) = '$Revision: 7466 $' =~ m{ \$Revision: \s+ (\S+) }x;
 
 =item * $VERSION = '0.0.1';
 
@@ -289,7 +289,7 @@ This distribution has no known incompatibilities.
 
 I think it would be a good idea to ignore this particular version string and versions thereof:
 
-    our ($VERSION) = '$Revision: 7269 $' =~ m{ \$Revision: \s+ (\S+) }x;
+    our ($VERSION) = '$Revision: 7466 $' =~ m{ \$Revision: \s+ (\S+) }x;
 
 I am however still undecided.
 

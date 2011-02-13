@@ -4,7 +4,7 @@ author:
   - 'Jonas B. Nielsen, <jonasbn@cpan.org>'
 configure_requires:
   Module::Build: 0.36
-generated_by: 'Module::Build version 0.3603'
+generated_by: 'Module::Build version 0.3607'
 license: artistic
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -13,10 +13,10 @@ name: Perl-Critic-Policy-logicLAB-RequireVersionFormat
 provides:
   Perl::Critic::Policy::logicLAB::RequireVersionFormat:
     file: lib/Perl/Critic/Policy/logicLAB/RequireVersionFormat.pm
-    version: 0.02
+    version: 0.03
 requires:
   List::MoreUtils: 0
-  Perl::Critic: 0
+  Perl::Critic: 1.03
   Perl::Critic::Utils: 0
   Test::Perl::Critic: 0
 resources:
@@ -27,4 +27,4 @@ resources:
   homepage: http://logiclab.jira.com/wiki/display/PCPMRVF/Home
   license: http://www.perlfoundation.org/artistic_license_1_0
   repository: http://logicLAB.jira.com/svn/PCPMRVF
-version: 0.02
+version: 0.03
