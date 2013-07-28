@@ -1,6 +1,6 @@
 package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
-# $Id: RequireVersionFormat.pm 7466 2011-02-13 13:11:54Z jonasbn $
+# $Id: RequireVersionFormat.pm 8136 2013-07-28 06:39:02Z jonasbn $
 
 use strict;
 use warnings;
@@ -11,7 +11,7 @@ use List::MoreUtils qw(any);
 use Data::Dumper;
 use Carp qw(carp croak);
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
@@ -20,7 +20,7 @@ Readonly::Scalar my $DESC => q{"$VERSION" variable not conforming};
 ## critic [ValuesAndExpressions::RequireInterpolationOfMetachars]
 use constant supported_parameters => qw(strict_quotes ignore_quotes formats);
 use constant default_severity     => $SEVERITY_MEDIUM;
-use constant default_themes       => qw(maintenance);
+use constant default_themes       => qw(logiclab);
 use constant applies_to           => 'PPI::Document';
 
 my @strip_tokens = qw(
@@ -200,7 +200,7 @@ a violation.
 
 =over
 
-=item * our ($VERSION) = '$Revision: 7466 $' =~ m{ \$Revision: \s+ (\S+) }x;
+=item * our ($VERSION) = '$Revision: 8136 $' =~ m{ \$Revision: \s+ (\S+) }x;
 
 =item * $VERSION = '0.0.1';
 
@@ -289,7 +289,7 @@ This distribution has no known incompatibilities.
 
 I think it would be a good idea to ignore this particular version string and versions thereof:
 
-    our ($VERSION) = '$Revision: 7466 $' =~ m{ \$Revision: \s+ (\S+) }x;
+    our ($VERSION) = '$Revision: 8136 $' =~ m{ \$Revision: \s+ (\S+) }x;
 
 I am however still undecided.
 

@@ -2,9 +2,11 @@
 abstract: 'a simple policy enforcing strict version formatting'
 author:
   - 'Jonas B. Nielsen, <jonasbn@cpan.org>'
+build_requires: {}
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3607'
+  Module::Build: 0.40
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560'
 license: artistic
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -13,7 +15,7 @@ name: Perl-Critic-Policy-logicLAB-RequireVersionFormat
 provides:
   Perl::Critic::Policy::logicLAB::RequireVersionFormat:
     file: lib/Perl/Critic/Policy/logicLAB/RequireVersionFormat.pm
-    version: 0.03
+    version: 0.04
 requires:
   List::MoreUtils: 0
   Perl::Critic: 1.03
@@ -27,4 +29,4 @@ resources:
   homepage: http://logiclab.jira.com/wiki/display/PCPMRVF/Home
   license: http://www.perlfoundation.org/artistic_license_1_0
   repository: http://logicLAB.jira.com/svn/PCPMRVF
-version: 0.03
+version: 0.04
