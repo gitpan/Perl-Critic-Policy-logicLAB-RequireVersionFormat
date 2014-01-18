@@ -4,7 +4,7 @@
       "Jonas B. Nielsen, <jonasbn@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.132830",
    "license" : [
       "artistic_1"
    ],
@@ -24,14 +24,15 @@
             "List::MoreUtils" : "0",
             "Perl::Critic" : "1.03",
             "Perl::Critic::Utils" : "0",
-            "Test::Perl::Critic" : "0"
+            "Test::Perl::Critic" : "0",
+            "perl" : "v5.8.0"
          }
       }
    },
    "provides" : {
       "Perl::Critic::Policy::logicLAB::RequireVersionFormat" : {
          "file" : "lib/Perl/Critic/Policy/logicLAB/RequireVersionFormat.pm",
-         "version" : "0.04"
+         "version" : "0.05"
       }
    },
    "release_status" : "stable",
@@ -44,11 +45,11 @@
          "http://www.perlfoundation.org/artistic_license_1_0"
       ],
       "repository" : {
-         "url" : "http://logicLAB.jira.com/svn/PCPMRVF"
+         "url" : "https://github.com/jonasbn/pcpmrvf"
       },
       "x_ProjectChangelog" : "http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel",
       "x_ProjectSite" : "http://logicLAB.jira.com/browse/PCPMRVF",
       "x_ProjectWiki" : "http://logiclab.jira.com/wiki/display/PCPMRVF/Home"
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }

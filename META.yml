@@ -6,7 +6,7 @@ build_requires: {}
 configure_requires:
   Module::Build: 0.40
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.132830'
 license: artistic
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -15,12 +15,13 @@ name: Perl-Critic-Policy-logicLAB-RequireVersionFormat
 provides:
   Perl::Critic::Policy::logicLAB::RequireVersionFormat:
     file: lib/Perl/Critic/Policy/logicLAB/RequireVersionFormat.pm
-    version: 0.04
+    version: 0.05
 requires:
   List::MoreUtils: 0
   Perl::Critic: 1.03
   Perl::Critic::Utils: 0
   Test::Perl::Critic: 0
+  perl: v5.8.0
 resources:
   ProjectChangelog: http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
   ProjectSite: http://logicLAB.jira.com/browse/PCPMRVF
@@ -28,5 +29,5 @@ resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-logicLAB-Prohibit-RequireVersionFormat
   homepage: http://logiclab.jira.com/wiki/display/PCPMRVF/Home
   license: http://www.perlfoundation.org/artistic_license_1_0
-  repository: http://logicLAB.jira.com/svn/PCPMRVF
-version: 0.04
+  repository: https://github.com/jonasbn/pcpmrvf
+version: 0.05

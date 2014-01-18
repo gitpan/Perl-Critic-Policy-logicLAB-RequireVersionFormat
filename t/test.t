@@ -1,5 +1,5 @@
 
-# $Id: test.t 7204 2010-09-07 19:35:53Z jonasbn $
+# $Id$
 
 use strict;
 use warnings;
@@ -79,7 +79,7 @@ __DATA__
 0	use version; our $VERSION = qv(1.0611);
 0	Readonly our $VERSION = 1.0;
 0	Readonly::Scalar our $VERSION = 1.0;
-1	our ($VERSION) = '$Revision: 7204 $' =~ m{ \$Revision: \s+ (\S+) }x;
+1	our ($VERSION) = '$Revision$' =~ m{ \$Revision: \s+ (\S+) }x;
 0	our $VERSION = $Other::VERSION;
 1	our $VERSION = "0.0.1";
 1	$VERSION = "0.0.1";

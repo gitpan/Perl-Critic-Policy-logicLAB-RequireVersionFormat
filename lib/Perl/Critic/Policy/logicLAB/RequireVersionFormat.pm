@@ -1,6 +1,6 @@
 package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
-# $Id: RequireVersionFormat.pm 8136 2013-07-28 06:39:02Z jonasbn $
+# $Id$
 
 use strict;
 use warnings;
@@ -8,10 +8,10 @@ use base
     qw(Perl::Critic::Policy::Modules::RequireVersionVar Perl::Critic::Policy);
 use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans };
 use List::MoreUtils qw(any);
-use Data::Dumper;
 use Carp qw(carp croak);
+use 5.008;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
@@ -67,8 +67,8 @@ sub violates {
             $ok++;
         }
     }
-    
-    if ( $version_spec and not $ok) {
+
+    if ( $version_spec and not $ok ) {
         return $self->violation( $DESC, $EXPL, $doc );
     }
 
@@ -79,8 +79,8 @@ sub _parse_formats {
     my ( $self, $config_string ) = @_;
 
     my @formats = split m{ \s* [||] \s* }xms, $config_string;
-    
-    return \@formats
+
+    return \@formats;
 }
 
 sub initialize_if_enabled {
@@ -91,11 +91,11 @@ sub initialize_if_enabled {
 
     $self->{_strict_quotes} = $config->get('strict_quotes') || 0;
     $self->{_ignore_quotes} = $config->get('ignore_quotes') || 1;
-    
+
     my $formats = $config->get('formats');
-    
+
     if ($formats) {
-        $self->{_formats} = $self->_parse_formats( $formats );
+        $self->{_formats} = $self->_parse_formats($formats);
     }
 
     return $TRUE;
@@ -169,7 +169,7 @@ This policy is part of L<Perl::Critic::logicLAB> distribution.
 
 =head1 VERSION
 
-This documentation describes version 0.03
+This documentation describes version 0.05
 
 =head1 DESCRIPTION
 
@@ -200,7 +200,7 @@ a violation.
 
 =over
 
-=item * our ($VERSION) = '$Revision: 8136 $' =~ m{ \$Revision: \s+ (\S+) }x;
+=item * our ($VERSION) = '$Revision$' =~ m{ \$Revision: \s+ (\S+) }x;
 
 =item * $VERSION = '0.0.1';
 
@@ -228,7 +228,7 @@ We hope that $Other::VERSION conforms where defined, so we ignore for now.
 
 =back
 
-=head1 CONFIGURATION
+=head1 CONFIGURATION AND ENVIRONMENT
 
 =head2 strict_quotes
 
@@ -289,7 +289,7 @@ This distribution has no known incompatibilities.
 
 I think it would be a good idea to ignore this particular version string and versions thereof:
 
-    our ($VERSION) = '$Revision: 8136 $' =~ m{ \$Revision: \s+ (\S+) }x;
+    our ($VERSION) = '$Revision$' =~ m{ \$Revision: \s+ (\S+) }x;
 
 I am however still undecided.
 
@@ -352,7 +352,7 @@ The following policies have been disabled for this distribution
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2009-2010 Jonas B. Nielsen. All rights reserved.
+Copyright (c) 2009-2014 Jonas B. Nielsen. All rights reserved.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 

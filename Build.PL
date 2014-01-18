@@ -1,6 +1,6 @@
 # Build.PL for Perl::Critic::Policy::logicLAB::RequireVersionFormat
 
-# $Id: Build.PL 7438 2011-02-07 17:34:58Z jonasbn $
+# $Id$
 
 use strict;
 use Module::Build;
@@ -19,13 +19,14 @@ my $build = Module::Build->new(
 		'Perl::Critic'        => '1.03', #REF: PCPMRVF-15
 		'Perl::Critic::Utils' => '0',
 		'Test::Perl::Critic'  => '0',
+        'perl'                => '5.8.0',
     },
     meta_merge => {
         resources => {
             homepage => 'http://logiclab.jira.com/wiki/display/PCPMRVF/Home',
             bugtracker =>
                 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-logicLAB-Prohibit-RequireVersionFormat',
-            repository => 'http://logicLAB.jira.com/svn/PCPMRVF',
+            repository => 'https://github.com/jonasbn/pcpmrvf',
             ProjectChangelog =>
                 'http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel',
             ProjectSite => 'http://logicLAB.jira.com/browse/PCPMRVF',

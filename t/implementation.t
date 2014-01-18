@@ -1,5 +1,5 @@
 
-# $Id: implementation.t 7173 2010-09-04 07:11:24Z jonasbn $
+# $Id$
 
 use strict;
 use  warnings;

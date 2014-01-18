@@ -1,0 +1,17 @@
+Build.PL
+Changes
+lib/Perl/Critic/Policy/logicLAB/RequireVersionFormat.pm
+Makefile.PL
+MANIFEST
+META.json
+META.yml
+README
+t/changes.t
+t/critic.t
+t/example.conf
+t/implementation.t
+t/kwalitee.t
+t/perlcriticrc
+t/prerequisites.t
+t/test.t
+TODO
