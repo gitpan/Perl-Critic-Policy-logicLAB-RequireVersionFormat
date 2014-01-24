@@ -32,7 +32,7 @@
    "provides" : {
       "Perl::Critic::Policy::logicLAB::RequireVersionFormat" : {
          "file" : "lib/Perl/Critic/Policy/logicLAB/RequireVersionFormat.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       }
    },
    "release_status" : "stable",
@@ -51,5 +51,5 @@
       "x_ProjectSite" : "http://logicLAB.jira.com/browse/PCPMRVF",
       "x_ProjectWiki" : "http://logiclab.jira.com/wiki/display/PCPMRVF/Home"
    },
-   "version" : "0.05"
+   "version" : "0.06"
 }

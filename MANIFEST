@@ -12,6 +12,7 @@ t/example.conf
 t/implementation.t
 t/kwalitee.t
 t/perlcriticrc
+t/pod.t
 t/prerequisites.t
 t/test.t
 TODO
