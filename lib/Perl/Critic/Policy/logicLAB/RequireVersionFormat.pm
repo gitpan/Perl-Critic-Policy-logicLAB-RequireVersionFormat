@@ -11,7 +11,7 @@ use List::MoreUtils qw(any);
 use Carp qw(carp croak);
 use 5.008;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
@@ -161,7 +161,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::logicLAB::RequireVersionFormat
+Perl::Critic::Policy::logicLAB::RequireVersionFormat - assert version number formats
 
 =head1 AFFILIATION
 
